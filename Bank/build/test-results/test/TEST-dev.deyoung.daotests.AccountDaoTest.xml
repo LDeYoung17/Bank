@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.deyoung.daotests.AccountDaoTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-02-23T18:04:47" hostname="DESKTOP-9J5MREF" time="0.103">
+  <properties/>
+  <testcase name="create_account_test()" classname="dev.deyoung.daotests.AccountDaoTest" time="0.059"/>
+  <testcase name="get_account_by_id()" classname="dev.deyoung.daotests.AccountDaoTest" time="0.006"/>
+  <testcase name="get_account_by_account_number()" classname="dev.deyoung.daotests.AccountDaoTest" time="0.003"/>
+  <testcase name="update_account_number()" classname="dev.deyoung.daotests.AccountDaoTest" time="0.007"/>
+  <testcase name="update_account_balance()" classname="dev.deyoung.daotests.AccountDaoTest" time="0.012"/>
+  <testcase name="update_account_name()" classname="dev.deyoung.daotests.AccountDaoTest" time="0.004"/>
+  <testcase name="delete_account()" classname="dev.deyoung.daotests.AccountDaoTest" time="0.003"/>
+  <system-out><![CDATA[Account{accountId=1, accountNumber=0, clientId=0, credit=0.0, debit=0.0, accountBalance=0.0, active=true}
+John Smith checking's ID number is 1
+John Smith checking's Account number is 0
+Account ID 1's Account Number has been updated to 1111111
+Account ID 1's Account Number has been updated to 100.0
+Account ID 1's name has been updated to Rose Tyler savings
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
