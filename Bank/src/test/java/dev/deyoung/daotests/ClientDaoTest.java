@@ -2,6 +2,7 @@ package dev.deyoung.daotests;
 
 import dev.deyoung.daos.ClientDAO;
 import dev.deyoung.daos.ClientDaoLocal;
+import dev.deyoung.daos.ClientDaoPostgres;
 import dev.deyoung.entities.Client;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
@@ -15,7 +16,7 @@ import java.sql.SQLOutput;
 
 public class ClientDaoTest {
 
-    private static ClientDAO clientDao = new ClientDaoLocal();
+    private static ClientDAO clientDao = new ClientDaoPostgres();
     private static Client testClient = null;
 
     //Create test
@@ -62,64 +63,52 @@ public class ClientDaoTest {
 
     }
 
-    @Test
-    @Order(4)
-    void update_client_ssn(){
-
-        Client client = clientDao.getClientById(testClient.getClientId());
-        client.setSSN(1111111111);
-
-        clientDao.updateClient(client);
-
-        Assertions.assertEquals(testClient.getSSN(), client.getSSN());
-        System.out.println("Client ID " + testClient.getClientId() + "'s SSN has been updated to " + testClient.getSSN());
-
-
-    }
-
-    @Test
-    @Order(5)
-    void update_client_name(){
-
-        Client client = clientDao.getClientById(testClient.getClientId());
-
-        client.setClientName("Rose Tyler");
-        clientDao.updateClient(client);
-
-        Assertions.assertEquals(testClient.getClientId(), client.getClientId());
-
-        System.out.println("Client ID " + testClient.getClientId() + "'s name has been updated to " + testClient.getClientName());
-
-    }
-
 //    @Test
-//    @Order(6)
+//    @Order(4)
+//    void update_client_ssn(){
 //
-//    void delete_dashes(){
+//        Client client = clientDao.getClientById(testClient.getClientId());
+//        client.setSSN(1111111111);
+//
+//        clientDao.updateClient(client);
+//        Client updatedClient = clientDao.getClientById(client.getClientId());
+//        Assertions.assertEquals(updatedClient.getSSN(), client.getSSN());
+//        System.out.println("Client ID " + testClient.getClientId() + "'s SSN has been updated to " + testClient.getSSN());
+//
+//
+//    }
+//
+//    @Test
+//    @Order(5)
+//    void update_client_name(){
 //
 //        Client client = clientDao.getClientById(testClient.getClientId());
 //
-//        client.
+//        client.setClientName("Rose Tyler");
+//        clientDao.updateClient(client);
+//        Client updatedClient = clientDao.getClientById( client.getClientId());
 //
 //
-//        Assertions.assertTrue(client.getSSN().equals("1111111111"));
+//        Assertions.assertEquals(updatedClient.getClientName(), client.getClientName());
 //
-//        System.out.println(client);
+//        System.out.println("Client ID " + testClient.getClientId() + "'s name has been updated to " + testClient.getClientName());
+//
 //    }
 
-//    @Test
-//    @Order(7)
-//    void delete_client(){
-//
-//        int clientId = testClient.getClientId();
-//        boolean deleted = clientDao.deleteClientByClientId(clientId);
-//
-//        Assertions.assertTrue(deleted);
-//
-//
-//
-//
-//    }
+
+    @Test
+    @Order(7)
+    void delete_client(){
+
+        int clientId = testClient.getClientId();
+        boolean deleted = clientDao.deleteClientByClientId(clientId);
+
+        Assertions.assertTrue(deleted);
+
+
+
+
+    }
 
 
 

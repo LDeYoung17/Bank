@@ -1,12 +1,14 @@
 package dev.deyoung.services;
 
 import dev.deyoung.entities.Account;
+import dev.deyoung.entities.Client;
+
 import java.util.Set;
 
 public interface AccountService {
 
     //Create
-    Account newAccount (Account account);
+    Account newAccount (Account account, Client client);
 
     //Read
     Set<Account> getAllAccounts();
@@ -14,16 +16,13 @@ public interface AccountService {
     Set<Account> getAccountByName(String name);
     Account getAccountByAccountNumber(int accountNumber);
     Set<Account> getAccountByClientId(int clientId);
+    double getAccountBalance(int id, double accountBalance);
 
 
     //Update
      Account updateAccountName(Account account, String name);
-     Account updateAccountId(Account account, int accountId);
-     Account updateAccountNumber(Account account);
-     Account updateClientId(Account account);
      Account changeAccountBalance(Account account, double credit, double debit);
-     Account updateAccountBalance(Account account, double accountBalance);
-     Account updateAccountActive(Account account);
+     //Account updateAccountActive(Account account, boolean isActive);
 
 
 

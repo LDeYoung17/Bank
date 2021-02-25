@@ -1,16 +1,17 @@
 package dev.deyoung.services;
 
-import dev.deyoung.daos.AccountDAO;
-import dev.deyoung.daos.ClientDAO;
-import dev.deyoung.daos.ClientDaoLocal;
+import dev.deyoung.daos.*;
+
 import dev.deyoung.entities.Account;
+import dev.deyoung.entities.Client;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class AccountServiceImpl implements AccountService {
     private AccountDAO accountDao;
     private static int accountNumberMaker = 0;
-    private ClientDAO clientDao = new ClientDaoLocal();
+    private ClientDAO clientDao = new ClientDaoPostgres();
     private ClientService clientService;
 
 
@@ -18,8 +19,8 @@ public class AccountServiceImpl implements AccountService {
 
     //create method
     @Override
-    public Account newAccount(Account account) {
-        this.accountDao.createAccount(account);
+    public Account newAccount(Account account, Client client) {
+        this.accountDao.createAccount(account, client);
         return account;
     }
 
@@ -67,6 +68,13 @@ public class AccountServiceImpl implements AccountService {
         return accountByClientId;
     }
 
+    @Override
+    public double getAccountBalance(int id, double accountBalance) {
+        Account account = this.accountDao.getAccountById(id);
+        accountBalance = account.getAccountBalance();
+        return accountBalance;
+    }
+
     //update/set methods
     @Override
     public Account updateAccountName(Account account, String name) {
@@ -78,31 +86,6 @@ public class AccountServiceImpl implements AccountService {
         this.accountDao.updateAccount(account);
 
         return account;
-    }
-
-    @Override
-    public Account updateAccountId(Account account, int accountId) {
-        //intentionally left blank. Account id should not be updated after being set.
-        return null;
-    }
-
-    @Override
-    public Account updateAccountNumber(Account account) {
-        //intentionally left blank. Account number should not be updated after being set.
-        return null;
-    }
-
-    @Override
-    public Account updateClientId(Account account) {
-
-        //intentionally left blank. Account's client id should not be updated after being set.
-        return null;
-    }
-
-    @Override
-    public Account updateAccountBalance(Account account, double accountBalance) {
-        //intentionally left blank. Accounts should only be updated by debits/credits in the changeAccountBalance method
-        return null;
     }
 
     @Override
@@ -128,21 +111,21 @@ public class AccountServiceImpl implements AccountService {
         return account;
     }
 
-    @Override
-    public Account updateAccountActive(Account account) {
-        Account currentAccount = this.accountDao.getAccountById(account.getAccountId());
-        if(currentAccount.isActive() == false && account.isActive() == true){
-            account.setActive(false);
-        }
-        else if(currentAccount.isActive() == true && account.isActive() == false){
-            account.setActive(true);
-        }
-
-        account = currentAccount;
-        this.accountDao.updateAccount(account);
-
-        return account;
-    }
+//    @Override
+//    public Account updateAccountActive(Account account, boolean isActive) {
+//        Account currentAccount = this.accountDao.getAccountById(account.getAccountId());
+//        if(currentAccount.isActive() == isActive && account.isActive() != isActive){
+//            account.setActive(isActive);
+//        }
+////        else if(currentAccount.isActive() == true && account.isActive() == false){
+////            account.setActive(true);
+////        }
+//
+//        account = currentAccount;
+//        this.accountDao.updateAccount(account);
+//
+//        return account;
+//    }
 
     //delete method
     @Override

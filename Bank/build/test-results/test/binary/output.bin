@@ -1,6 +1,1 @@
-kAccount{accountId=1, accountNumber=0, clientId=0, credit=0.0, debit=0.0, accountBalance=0.0, active=true}
-&John Smith checking's ID number is 1
-+John Smith checking's Account number is 0
-;Account ID 1's Account Number has been updated to 1111111
-9Account ID 1's Account Number has been updated to 100.0
-<Account ID 1's name has been updated to Rose Tyler savings
+@Client{clientName='John Smith', clientId=17, SSN='1111111111'}

@@ -16,7 +16,7 @@ public class Account {
     private double credit;
     private double debit;
     private double accountBalance;
-    private boolean active;
+    //private boolean active;
 
     public int getAccountId() {
         return accountId;
@@ -30,7 +30,7 @@ public class Account {
 
     }
 
-    public Account(String accountName, int accountId, int accountNumber, int clientId, double credit, double debit, double accountBalance,  boolean active) {
+    public Account(String accountName, int accountId, int accountNumber, int clientId, double credit, double debit, double accountBalance) {
         this.accountName = accountName;
         this.accountId = accountId;
         this.accountNumber = accountNumber;
@@ -38,10 +38,11 @@ public class Account {
         this.credit = credit;
         this.debit = debit;
         this.accountBalance = accountBalance;
-        this.active = active;
+        //this.active = active;
     }
     public String getAccountName() {return this.accountName = accountName;
     }
+    public void setAccountName(String accountName) {this.accountName = accountName;}
     public int getAccountNumber() {return accountNumber;}
 
     public void setAccountNumber(int accountNumber) {this.accountNumber = accountNumber;}
@@ -62,9 +63,9 @@ public class Account {
 
     public void setAccountBalance(double accountBalance) {this.accountBalance = accountBalance;}
 
-    public boolean isActive() {return active;}
-
-    public void setActive(boolean active) {this.active = active;}
+//    public boolean isActive() {return active;}
+//
+//    public void setActive(boolean active) {this.active = active;}
 
     @Override
     public String toString() {
@@ -75,7 +76,7 @@ public class Account {
                 ", credit=" + credit +
                 ", debit=" + debit +
                 ", accountBalance=" + accountBalance +
-                ", active=" + active +
+                //", active=" + active +
 
                 '}';
     }

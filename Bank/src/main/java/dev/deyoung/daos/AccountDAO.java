@@ -8,7 +8,7 @@ import java.util.Set;
 public interface AccountDAO {
 
     //Create
-    Account createAccount(Account account);
+    Account createAccount(Account account, Client client);
 
     //Read
     Set<Account> getAccounts();

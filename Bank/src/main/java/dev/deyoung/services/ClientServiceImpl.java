@@ -1,6 +1,6 @@
 package dev.deyoung.services;
 
-import dev.deyoung.daos.ClientDaoLocal;
+import dev.deyoung.daos.ClientDaoPostgres;
 import dev.deyoung.entities.Client;
 import dev.deyoung.daos.ClientDAO;
 
@@ -52,36 +52,6 @@ public class ClientServiceImpl implements ClientService{
         return this.clientDAO.getClientBySSN(SSN);
 
     }
-
-//    @Override
-//    public Client client getClientBySocial(int SSN) {
-////        Set<Client> allClients = this.clientDAO.getClients();
-////        Set<Client> clientBySSN = new HashSet<Client>();
-////
-////        for(Client client : allClients){
-////            if(client.getSSN() == SSN{
-////                clientBySSN.add(client);
-////            }
-////        }
-////
-////        return clientBySSN;
-//
-//        return this.clientDAO.getClientBySSN(SSN);
-//    }
-
-//    @Override
-//    public Client removeDashes(Client client, int id) {
-//        Client updatedClient = this.clientDAO.getClientById(id);
-//        String SSN = updatedClient.getSSN();
-//        String updateSSN = SSN.replace("-", "");
-//        updatedClient.setSSN(updateSSN);
-//        client = this.clientDAO.updateClient(updatedClient);
-//
-//
-//
-//        return client;
-//
-//    }
 
     @Override
     public Client updateClient(Client client) {

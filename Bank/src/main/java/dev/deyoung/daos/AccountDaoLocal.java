@@ -1,6 +1,8 @@
 package dev.deyoung.daos;
 
 import dev.deyoung.entities.Account;
+import dev.deyoung.entities.Client;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -13,11 +15,10 @@ public class AccountDaoLocal implements AccountDAO {
     private static int accountIdMaker = 0;
 
     @Override
-    public Account createAccount(Account account) {
+    public Account createAccount(Account account, Client client) {
         account.setAccountId(++idMaker);
         account.setAccountNumber(++accountIdMaker);
         accountTable.put(account.getAccountId(),account);
-        //clientSocialTable.put(client.getSSN(), client);
         return account;
     }
 

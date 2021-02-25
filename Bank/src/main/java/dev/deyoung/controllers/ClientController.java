@@ -1,7 +1,8 @@
 package dev.deyoung.controllers;
 
 import com.google.gson.Gson;
-import dev.deyoung.daos.ClientDaoLocal;
+
+import dev.deyoung.daos.ClientDaoPostgres;
 import dev.deyoung.entities.Client;
 import dev.deyoung.services.ClientService;
 import dev.deyoung.services.ClientServiceImpl;
@@ -10,7 +11,7 @@ import java.util.Set;
 
 public class ClientController {
 
-    private ClientService clientService = new ClientServiceImpl(new ClientDaoLocal());
+    private ClientService clientService = new ClientServiceImpl(new ClientDaoPostgres());
 
     //Creating clients
     public Handler createClientHandler = (ctx) ->{
@@ -27,11 +28,17 @@ public class ClientController {
     //Getting all clients
     public Handler getAllClientsHandler = (ctx) ->{
 
-            Set<Client> allClients = this.clientService.getClients();
-            Gson gson = new Gson();
-            String clientsJSON = gson.toJson(allClients);
-            ctx.result(clientsJSON);
-            ctx.status(200);
+        Set<Client > allClients = this.clientService.getClients();
+            if (allClients.isEmpty()){
+                ctx.result("Sorry! could not get clients!");
+                ctx.status(404);
+            }else{
+                Gson gson = new Gson();
+                String clientsJSON = gson.toJson(allClients);
+                ctx.result(clientsJSON);
+                ctx.status(200);
+            }
+
     };
 
 
@@ -74,26 +81,30 @@ public class ClientController {
     };
     //Update Client. Intentionally gives error. Clients should not be updated after they are implemented
     public Handler updateClientHandler = (ctx) ->{
-
-//        int id = Integer.parseInt(ctx.pathParam("id"));
-//        Client client1 = clientService.getClientById(id);
-//        String body = ctx.body();
-//        Gson gson = new Gson();
-//        Client client = gson.fromJson(body,Client.class);
-//        String ssn = client.getSSN();
-//        client1.setSSN(ssn);
-//        String name = client.getClientName();
-//        client1.setClientName(name);
-//
-//        this.clientService.updateClient(client1);
-        ctx.result("Clients cannot be updated once implemented!");
-        ctx.status(403);
+        Set<Client > allClients = this.clientService.getClients();
+        if (allClients.isEmpty()){
+            ctx.result("Sorry! could not find client!");
+            ctx.status(404);
+        }else{
+            ctx.result("Clients cannot be updated once implemented!");
+            ctx.status(403);
+        }
 
     };
 
     //Deleting clients
     public Handler deleteClientHandler = (ctx) ->{
-        int id = Integer.parseInt(ctx.pathParam("id"));
-        boolean deleted = this.clientService.deleteClientByIdOnly(id);
+
+        Set<Client > allClients = this.clientService.getClients();
+        if (allClients.isEmpty()){
+            ctx.result("Sorry! Could not find client!");
+            ctx.status(404);
+        }else{
+            int id = Integer.parseInt(ctx.pathParam("id"));
+            boolean deleted = this.clientService.deleteClientByIdOnly(id);
+            ctx.status(200);
+            ctx.result("Client deleted!");
+        }
+
     };
 }

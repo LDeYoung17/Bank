@@ -1,8 +1,11 @@
 package dev.deyoung.servicetests;
 
 import dev.deyoung.daos.AccountDaoLocal;
+import dev.deyoung.daos.AccountDaoPostgres;
 import dev.deyoung.daos.ClientDaoLocal;
+import dev.deyoung.daos.ClientDaoPostgres;
 import dev.deyoung.entities.Account;
+import dev.deyoung.entities.Client;
 import dev.deyoung.services.AccountService;
 import dev.deyoung.services.AccountServiceImpl;
 import dev.deyoung.services.ClientService;
@@ -20,18 +23,19 @@ public class AccountServiceTest {
 
     private static Account testAccount = null;
     private static Account testAccount2 = null;
-    private static AccountService accountservice = new AccountServiceImpl(new AccountDaoLocal());
-    private static ClientService clientService = new ClientServiceImpl(new ClientDaoLocal());
+    private static AccountService accountservice = new AccountServiceImpl(new AccountDaoPostgres());
+    private static ClientService clientService = new ClientServiceImpl(new ClientDaoPostgres());
 
     @Test
     @Order(1)
 
     void create_account_in_service(){
-
-        Account account = new Account("JohnSmith",0, 0, 0,0.00,0.00,0.00, true);
-        Account account2 = new Account("JohnSmith checking",0, 0, 0,0.00,0.00,0.00, true);
-        accountservice.newAccount(account);
-        accountservice.newAccount(account2);
+        Client client = new Client("John Smith",0 , 11111111);
+        Client client2 = new Client("John Smith",0 , 33333333);
+        Account account = new Account("JohnSmith",0, 0, 0,0.00,0.00,0.00);
+        Account account2 = new Account("JohnSmith checking",0, 0, 0,0.00,0.00,0.00);
+        accountservice.newAccount(account, client);
+        accountservice.newAccount(account2, client2);
 
         System.out.println(account);
         System.out.println(account.getAccountName());
@@ -104,52 +108,11 @@ public class AccountServiceTest {
 
     }
 
+
+
+
     @Test
     @Order(7)
-
-    void update_account_number(){
-
-        Account account = testAccount;
-        Account account2 = testAccount2;
-        Account updatedAccount = accountservice.updateAccountNumber(account);
-        Account updatedAccount2 = accountservice.updateAccountNumber(account2);
-
-        System.out.println(updatedAccount.getAccountNumber());
-        System.out.println(updatedAccount2.getAccountNumber());
-
-        Assertions.assertNotEquals(0, updatedAccount.getAccountNumber());
-        Assertions.assertNotEquals(0, updatedAccount2.getAccountNumber());
-
-
-    }
-
-    @Test
-    @Order(8)
-
-    void update_account_client_id(){
-
-        Account account = testAccount;
-        Account account2 = testAccount2;
-
-        Account updatedAccount = accountservice.updateAccountNumber(account);
-        Account updatedAccount2 = accountservice.updateAccountNumber(account2);
-
-        System.out.println(updatedAccount.getClientId());
-        System.out.println(updatedAccount);
-        System.out.println(updatedAccount2);
-        System.out.println(updatedAccount2.getClientId());
-
-
-
-
-        Assertions.assertNotEquals(1, updatedAccount.getClientId());
-        Assertions.assertNotEquals(1, updatedAccount2.getClientId());
-
-
-    }
-
-    @Test
-    @Order(9)
 
     void update_account_balance(){
 
@@ -173,26 +136,26 @@ public class AccountServiceTest {
 
 
     }
+//    @Test
+//    @Order(8)
+//    void set_account_active(){
+//
+//        Account account = testAccount;
+//        Account account2 = testAccount2;
+//
+//        account2.setActive(false);
+//        Account updatedAccount = accountservice.updateAccountActive(account);
+//        Account updatedAccount2 = accountservice.updateAccountActive(account2);
+//
+//        Assertions.assertTrue(updatedAccount.isActive());
+//        Assertions.assertFalse(updatedAccount2.isActive());
+//
+//
+//
+//    }
+
     @Test
-    @Order(10)
-    void set_account_active(){
-
-        Account account = testAccount;
-        Account account2 = testAccount2;
-
-        account2.setActive(false);
-        Account updatedAccount = accountservice.updateAccountActive(account);
-        Account updatedAccount2 = accountservice.updateAccountActive(account2);
-
-        Assertions.assertTrue(updatedAccount.isActive());
-        Assertions.assertFalse(updatedAccount2.isActive());
-
-
-
-    }
-
-    @Test
-    @Order(11)
+    @Order(8)
 
     void delete_account(){
 

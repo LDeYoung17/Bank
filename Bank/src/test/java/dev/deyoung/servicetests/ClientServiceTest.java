@@ -1,6 +1,7 @@
 package dev.deyoung.servicetests;
 
 import dev.deyoung.daos.ClientDaoLocal;
+import dev.deyoung.daos.ClientDaoPostgres;
 import dev.deyoung.entities.Client;
 import dev.deyoung.services.ClientService;
 import dev.deyoung.services.ClientServiceImpl;
@@ -13,7 +14,7 @@ import java.util.Set;
 public class ClientServiceTest {
 
     private static Client testClient = null;
-    private static ClientService clientservice = new ClientServiceImpl(new ClientDaoLocal());
+    private static ClientService clientservice = new ClientServiceImpl(new ClientDaoPostgres());
 
     @Test
     @Order(1)
@@ -79,15 +80,15 @@ public class ClientServiceTest {
 
 
 
-//    @Test
-//    @Order(7)
-//
-//    void delete_client(){
-//
-//        Client client = testClient;
-//        boolean deleted = clientservice.deleteClientByIdOnly(client.getClientId());
-//
-//
-//        Assertions.assertTrue(deleted);
-//    }
+    @Test
+    @Order(7)
+
+    void delete_client(){
+
+        Client client = testClient;
+        boolean deleted = clientservice.deleteClientByIdOnly(client.getClientId());
+
+
+        Assertions.assertTrue(deleted);
+    }
 }

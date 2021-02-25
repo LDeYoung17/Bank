@@ -15,7 +15,7 @@ public class ClientApp {
         app.get("clients", clientController.getAllClientsHandler);
         app.post("clients", clientController.createClientHandler);
         app.get("clients/:id", clientController.ClientByIdHandler);
-        app.get("clientssocial/:ssn", clientController.ClientBySSNHandler);
+        app.get("clients/social/:ssn", clientController.ClientBySSNHandler);
         app.put("clients/:id", clientController.updateClientHandler);
         app.delete("clients/:id", clientController.deleteClientHandler);
         app.start();

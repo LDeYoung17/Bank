@@ -1,10 +1,10 @@
-dev/deyoung/daotests/ClientDaoTest.java
- dev.deyoung.daotests.ClientDaoTest
+dev/deyoung/servicetests/ClientServiceTest.java
+ dev.deyoung.servicetests.ClientServiceTest
 utiltests/ConnectionUtilTest.java
  utiltests.ConnectionUtilTest
 dev/deyoung/daotests/AccountDaoTest.java
  dev.deyoung.daotests.AccountDaoTest
 dev/deyoung/servicetests/AccountServiceTest.java
  dev.deyoung.servicetests.AccountServiceTest
-dev/deyoung/servicetests/ClientServiceTest.java
- dev.deyoung.servicetests.ClientServiceTest
+dev/deyoung/daotests/ClientDaoTest.java
+ dev.deyoung.daotests.ClientDaoTest

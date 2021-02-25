@@ -11,8 +11,7 @@ public class Client {
 
 
 
-    Client(){
-
+    public Client(){
     }
 
     public Client(String clientName, int clientId, int SSN){
@@ -20,9 +19,6 @@ public class Client {
         this.clientName = clientName;
         this.clientId = clientId;
         this.SSN = SSN;
-        //this.accountId = accountId;
-
-
 
     }
 
