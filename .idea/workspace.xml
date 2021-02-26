@@ -5,30 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eadad8ec-049a-49b0-9b34-b0fd9907e8ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Bank.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Bank.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/controllers/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/controllers/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/daos/AccountDaoLocal.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/daos/AccountDaoLocal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/entities/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/entities/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/services/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/services/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/services/AccountServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/services/ClientServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/build/classes/java/main/dev/deyoung/utils/ConnectionUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/src/main/java/dev/deyoung/utils/JWTUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +41,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,6 +113,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
