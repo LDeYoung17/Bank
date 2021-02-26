@@ -1,11 +1,13 @@
 package dev.deyoung.controllers;
 
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.google.gson.Gson;
 
 import dev.deyoung.daos.ClientDaoPostgres;
 import dev.deyoung.entities.Client;
 import dev.deyoung.services.ClientService;
 import dev.deyoung.services.ClientServiceImpl;
+import dev.deyoung.utils.JWTUtils;
 import io.javalin.http.Handler;
 import java.util.Set;
 
@@ -100,10 +102,20 @@ public class ClientController {
             ctx.result("Sorry! Could not find client!");
             ctx.status(404);
         }else{
-            int id = Integer.parseInt(ctx.pathParam("id"));
-            boolean deleted = this.clientService.deleteClientByIdOnly(id);
-            ctx.status(200);
-            ctx.result("Client deleted!");
+
+            String jwt = ctx.header("Authorization");
+            DecodedJWT decodedJWT = JWTUtils.isValidJWT(jwt);
+            String role = decodedJWT.getClaim("role").asString();
+
+            if(decodedJWT != null && role.equals("Employee")){
+                int id = Integer.parseInt(ctx.pathParam("id"));
+                boolean deleted = this.clientService.deleteClientByIdOnly(id);
+                ctx.status(200);
+                ctx.result("Client deleted!");
+            }else{
+                ctx.result("Sorry! You are not authorized to delete clients!");
+                ctx.status(403);
+            }
         }
 
     };

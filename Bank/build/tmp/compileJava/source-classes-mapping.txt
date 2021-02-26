@@ -18,6 +18,8 @@ dev/deyoung/controllers/AccountController.java
  dev.deyoung.controllers.AccountController
 dev/deyoung/entities/Client.java
  dev.deyoung.entities.Client
+dev/deyoung/utils/JWTUtils.java
+ dev.deyoung.utils.JWTUtils
 dev/deyoung/services/AccountService.java
  dev.deyoung.services.AccountService
 dev/deyoung/daos/AccountDAO.java
