@@ -1,3 +1,6 @@
-èeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiZW1wbG95ZWUiLCJlbXBOYW1lIjoiSmFjayBIYXJrbmVzcyJ9.UMWSTpFKxF2eZRRxRAlWlnGYkGKI6kMBNKxT_OzKE-E
-
-employee
+JHibernate: insert into ClientDaoPostgres (SSN, clientName) values (?, ?)
+7Client{clientName='John Smith', clientId=32, SSN='0'}
+≥Hibernate: select client0_.clientId as clientid1_0_0_, client0_.SSN as ssn2_0_0_, client0_.clientName as clientna3_0_0_ from ClientDaoPostgres client0_ where client0_.clientId=?
+John Smith's ID number is 32
+≥Hibernate: select client0_.clientId as clientid1_0_0_, client0_.SSN as ssn2_0_0_, client0_.clientName as clientna3_0_0_ from ClientDaoPostgres client0_ where client0_.clientId=?
+;Hibernate: delete from ClientDaoPostgres where clientId=?

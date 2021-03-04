@@ -1,22 +1,15 @@
 package dev.deyoung.daotests;
 
 import dev.deyoung.daos.ClientDAO;
-import dev.deyoung.daos.ClientDaoLocal;
-import dev.deyoung.daos.ClientDaoPostgres;
+import dev.deyoung.daos.HibernateClientDao;
 import dev.deyoung.entities.Client;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
-
-import java.sql.SQLOutput;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class ClientDaoTest {
 
-    private static ClientDAO clientDao = new ClientDaoPostgres();
+    private static ClientDAO clientDao = new HibernateClientDao();
     private static Client testClient = null;
 
     //Create test

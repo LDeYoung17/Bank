@@ -1,12 +1,16 @@
+utiltests/JWTUtilTest.java
+ utiltests.JWTUtilTest
 dev/deyoung/servicetests/ClientServiceTest.java
  dev.deyoung.servicetests.ClientServiceTest
-dev/deyoung/daotests/ClientDaoTest.java
- dev.deyoung.daotests.ClientDaoTest
+dev/deyoung/hibernatetests/HibernateTest.java
+ dev.deyoung.hibernatetests.HibernateTest
+utiltests/HibernateUtilTest.java
+ utiltests.HibernateUtilTest
 utiltests/ConnectionUtilTest.java
  utiltests.ConnectionUtilTest
 dev/deyoung/daotests/AccountDaoTest.java
  dev.deyoung.daotests.AccountDaoTest
 dev/deyoung/servicetests/AccountServiceTest.java
  dev.deyoung.servicetests.AccountServiceTest
-utiltests/JWTUtilTest.java
- utiltests.JWTUtilTest
+dev/deyoung/daotests/ClientDaoTest.java
+ dev.deyoung.daotests.ClientDaoTest

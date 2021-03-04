@@ -107,7 +107,7 @@ public class ClientController {
             DecodedJWT decodedJWT = JWTUtils.isValidJWT(jwt);
             String role = decodedJWT.getClaim("role").asString();
 
-            if(decodedJWT != null && role.equals("Employee")){
+            if(decodedJWT != null && role.equals("Manager")){
                 int id = Integer.parseInt(ctx.pathParam("id"));
                 boolean deleted = this.clientService.deleteClientByIdOnly(id);
                 ctx.status(200);

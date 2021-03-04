@@ -932,3 +932,278 @@ org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps yo
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:773)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:905)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-03-01 14:59:57 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 14:59:58 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 14:59:58 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 14:59:58 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 14:59:58 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 14:59:58 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 14:59:58 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 14:59:59 WARN  JdbcEnvironmentInitiator:132 - HHH000342: Could not obtain connection to query metadata
+org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.postgreSQLDialect] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:156)
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:239)
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:183)
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:170)
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:164)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:74)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:51)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:97)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
+	at dev.deyoung.utils.HibernateUtil.createSF(HibernateUtil.java:13)
+	at utiltests.HibernateUtilTest.get_SF(HibernateUtilTest.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:133)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.postgreSQLDialect]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:152)
+	... 113 more
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.hibernate.dialect.postgreSQLDialect
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:589)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:468)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
+	... 114 more
+2021-03-01 15:01:22 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 15:01:23 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 15:01:23 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 15:01:23 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 15:01:23 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 15:01:23 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 15:01:23 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 15:01:24 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 15:01:25 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:01:41 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:01:42 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:01:42 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:01:42 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:01:42 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:01:42 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:01:42 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:01:44 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:01:45 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:02:35 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:02:36 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:02:36 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:02:36 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:02:36 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:02:36 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:02:36 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:02:38 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:02:39 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:03:36 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:03:38 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:03:38 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:03:38 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:03:38 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:03:38 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:03:38 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:03:40 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:03:41 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:04:11 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:04:12 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:04:12 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:04:12 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:04:12 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:04:12 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:04:12 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:04:14 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:04:15 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:05:24 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:05:25 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:05:25 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:05:25 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:05:25 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:05:25 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:05:25 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:05:27 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:05:28 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:05:56 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:05:57 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:05:57 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:05:57 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:05:57 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:05:57 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:05:57 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:05:59 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:06:00 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:06:31 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:06:32 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:06:32 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:06:32 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:06:32 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:06:32 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:06:32 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:06:34 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:06:38 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:06:39 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:06:39 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:06:39 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:06:39 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:06:39 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:06:39 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:06:41 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:06:42 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:07:55 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:07:57 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:07:57 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:07:57 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:07:57 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:07:57 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:07:57 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:07:59 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:08:00 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:11:59 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:12:00 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:12:01 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:12:01 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:12:01 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:12:01 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:12:01 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:12:02 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:12:05 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:12:06 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 42P01
+2021-03-01 16:12:06 ERROR SqlExceptionHelper:142 - ERROR: relation "hibernate_sequence" does not exist
+  Position: 17
+2021-03-01 16:14:14 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:14:15 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:14:15 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:14:15 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:14:15 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:14:15 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:14:15 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:14:16 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:14:19 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:14:19 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 42P01
+2021-03-01 16:14:19 ERROR SqlExceptionHelper:142 - ERROR: relation "hibernate_sequence" does not exist
+  Position: 17
+2021-03-01 16:15:32 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:15:33 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:15:33 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:15:33 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:15:33 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:15:33 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:15:33 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:15:34 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:15:36 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:17:03 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:17:03 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:17:04 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:17:04 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:17:04 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:17:04 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:17:04 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:17:05 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:17:07 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-01 16:17:56 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-01 16:17:57 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-01 16:17:57 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 16:17:57 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://34.121.107.181:5432/BankAPI]
+2021-03-01 16:17:57 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=ldeyoung}
+2021-03-01 16:17:57 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 16:17:57 INFO  DriverManagerConnectionProviderImpl:259 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 16:17:59 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-01 16:18:01 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
