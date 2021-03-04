@@ -1,21 +1,18 @@
 package utiltests;
 
-import dev.deyoung.utils.JWTUtils;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class JWTUtilTest {
 
-    @Test
-    @Order(1)
-    void creates_jwt(){
-        String jwt = JWTUtils.generate("Manager", "Jack Harkness");
-        System.out.println(jwt);
-    }
+//    @Test
+//    @Order(1)
+//    void creates_jwt(){
+//        String jwt = JWTUtils.generate("Manager", "Jack Harkness");
+//        System.out.println(jwt);
+//    }
 
 //    @Test
 //    @Order(2)
